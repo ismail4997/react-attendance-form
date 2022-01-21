@@ -1,0 +1,38 @@
+body
+{
+    background: rgb(255, 255, 255);
+}
+.text
+{
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+.Attendance-Input
+{
+    
+    background: rgb(224, 224, 224);
+}
+.first
+{
+    margin-top:30px;
+    margin-left: 500px;
+}
+.second{
+    margin-left:500px;
+}
+.third{
+    margin-left:559px;
+}
+
+.success{
+
+    margin-top:20px;
+    margin-left:510px;
+    background: '#ff0000';
+    color: '#fff';
+    border: 'none';
+    padding: '5px 8px';
+    border-radius: '50%';
+    cursor: 'pointer';
+    float: 'right';
+}
