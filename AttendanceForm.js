@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 import './app1.css'
+import InputId from './inputId/inputId';
+import InputOption from './InputOption/InputOption';
+
+
+import InputStudent from './inputStudent/inputStudent';
 class AttendanceForm extends Component 
 {
      constructor(props) 
@@ -13,27 +18,11 @@ class AttendanceForm extends Component
             id: "",
             option: "",
         };
-        // we are using this function in this constructor so we can callback this function 
-        // without the fear that it will lose its context
-        this.changeNameHandler=this.changeNameHandler.bind(this);
-        this.changeIdHandler=this.changeIdHandler.bind(this);
-        this.changeOptionHandler=this.changeOptionHandler.bind(this);
-
     }
-    // these functions save the data into the their respective ids 
-    changeNameHandler=(event)=>
-    {
-        this.setState({name:event.target.value});
-
-    }
-    changeIdHandler=(event)=>
-    {
-        this.setState({id:event.target.value});
-    }
-    changeOptionHandler=(event)=>
-    {
-        this.setState({option:event.target.value})
-    }
+    
+   
+    
+    
 
     // this func saving data into the student array and showing into the console
     saveStudent=(e)=>
@@ -56,36 +45,13 @@ class AttendanceForm extends Component
                     <h1 className='text' > Student AttendanceForm </h1>
                     <form className='Attendance-form' onSubmit={this.handleSubmit} >
                         {/* a separate div for the first input enter student name*/}
-                        <div className='first'> 
-                            <input
-                            type="text" 
-                            placeholder='Student name' 
-                            value={this.state.name} 
-                            name='text'
-                            onChange={this.changeNameHandler} //handling name into this when the data is entered
-                            className='Attendance-Input'/>
-                           
-                        </div>
+                        <InputStudent></InputStudent>
                         <br></br>
                         {/* a separate div for the first input enter student id*/}
-                        <div className='second'>
-                            <input
-                            type="text" 
-                            placeholder='Enter Reg Id' 
-                            value={this.state.id } 
-                            name='text'
-                            onChange={this.changeIdHandler} //handling id into this when the data is entered
-                            className='Attendance-Input'/>
-                        </div>
-
+                        <InputId></InputId>
                         <br></br>
                         {/* a separate div for the first input enter student presence*/}
-                        <div onChange={this.changeOptionHandler} class="third">  
-                        {/* giving the handler function to control the context for the option id  */}
-                            <input type="radio" value="Present" name="class" /> Present
-                            <input type="radio" value="Absent" name="class" /> Absent
-                            <input type="radio" value="Late" name="class" /> Late
-                        </div>
+                        <InputOption></InputOption>
 
                         <div>
                             <button className="success" onClick={this.saveStudent}>Submit the details</button> 
