@@ -23,9 +23,9 @@ class InputOption extends Component {
         return ( 
         <div onChange={this.changeOptionHandler} class="third">  
         {/* giving the handler function to control the context for the option id  */}
-        <input type="radio" value="Present" name="class" /> Present
-        <input type="radio" value="Absent" name="class" /> Absent
-        <input type="radio" value="Late" name="class" /> Late
+        <input type="radio" value="Present" name="class" /> <span>Present </span>
+        <input type="radio" value="Absent" name="class" /><span>Absent </span>
+        <input type="radio" value="Late" name="class" /> <span>Late </span>
         </div>
          );
     }

@@ -1,11 +1,105 @@
-.first
+
+
+*, *::before, *::after 
+{
+    box-sizing: border-box;
+}
+
+.first  
+{
+    font-size: 14px;
+    position: relative;
+    border-top: 20px solid transparent; 
+}
+
+.first input 
+{
+    border: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    font-size: 14px;
+}
+.first .Attendance-Input {
+    position: absolute;
+    left: 12px;
+    bottom: 50%;
+    top: 22px;  
+    transform: translateY(-50%);
+    width: calc(100% - 24px);  
+    color: #aaa;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+.first input:focus + .placeholder {
+    top: -10px;
+    font-size: 10px;
+    color: #222;
+  }
+
+/* ::placeholder 
+{ 
+    color: #e4a112;
+    opacity: 2; 
+    position: absolute;
+
+    width: calc(100% - 24px);  
+   
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  } */
+  
+  /* .first
+  {
+    border-top: 20px solid transparent;
+
+  }
+  .first input:focus + .placeholder {
+    top: -10px;
+    font-size: 10px;
+    color: #222;
+  }
+  .third .placeholder {
+    
+    transition: top 0.3s ease-in;
+  }
+ 
+/* .first-text
+{
+    font-size: 1rem;
+    font-weight: 300px;
+    width: 85%;
+    padding-right: 5px;
+    padding-left: 10px;
+    border-radius: calc(0.5 * 100px);
+    
+} */
+
+/* .first
 {
     margin-top:30px;
     margin-left: 500px;
     width: 100%;
     height: 56px;
+    box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.05);
     border-radius: 4px;
     position: relative;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(0, 0, 0, 0);
     transition: 0.3s all;
-}
+    
+} */
+/* .first::after
+{
+    content: attr();
+} */ 

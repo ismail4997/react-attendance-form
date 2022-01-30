@@ -1,3 +1,19 @@
+
+
+
+
 .third{
+    
     margin-left:490px;
+    color: orange;
+    font-size:medium;
+    
+}
+.third::before{
+    color:rgb(12, 100, 46)
+
+}
+.third::active{
+    color: rgb(185, 178, 164);
+
 }
